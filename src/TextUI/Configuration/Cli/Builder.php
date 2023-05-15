@@ -77,6 +77,7 @@ final readonly class Builder
         'list-tests-xml=',
         'log-junit=',
         'log-teamcity=',
+        'log-xml=',
         'migrate-configuration',
         'no-configuration',
         'no-coverage',
@@ -212,6 +213,7 @@ final readonly class Builder
         $includePath                       = null;
         $iniSettings                       = [];
         $junitLogfile                      = null;
+        $xmlLogfile                        = null;
         $listGroups                        = false;
         $listSuites                        = false;
         $listTestFiles                     = false;
@@ -471,6 +473,11 @@ final readonly class Builder
 
                 case '--log-teamcity':
                     $teamcityLogfile = $option[1];
+
+                    break;
+
+                case '--log-xml':
+                    $xmlLogfile = $option[1];
 
                     break;
 
@@ -908,6 +915,7 @@ final readonly class Builder
             $help,
             $includePath,
             $iniSettings,
+            $xmlLogfile,
             $junitLogfile,
             $listGroups,
             $listSuites,
