@@ -1359,7 +1359,6 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             ->disableOriginalConstructor()
             ->disableOriginalClone()
             ->disableArgumentCloning()
-            ->disallowMockingUnknownTypes()
             ->onlyMethods($methods)
             ->getMock();
 
