@@ -45,11 +45,6 @@
       <code>$calledMethods</code>
     </PropertyTypeCoercion>
   </file>
-  <file src="src/Event/Events/Test/TestDouble/MockObjectFromWsdlCreated.php">
-    <PropertyTypeCoercion>
-      <code>$methods</code>
-    </PropertyTypeCoercion>
-  </file>
   <file src="src/Event/Events/Test/TestDouble/PartialMockObjectCreated.php">
     <PropertyTypeCoercion>
       <code>$methodNames</code>
