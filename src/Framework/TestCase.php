@@ -1358,7 +1358,6 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
         $partialMock = $this->getMockBuilder($originalClassName)
             ->disableOriginalConstructor()
             ->disableOriginalClone()
-            ->disableArgumentCloning()
             ->onlyMethods($methods)
             ->getMock();
 
