@@ -1192,8 +1192,6 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             true,
             callOriginalConstructor: false,
             callOriginalClone: false,
-            cloneArguments: false,
-            allowMockingUnknownTypes: false,
         );
 
         assert($mock instanceof $originalClassName);
@@ -2162,8 +2160,6 @@ abstract class TestCase extends Assert implements Reorderable, SelfDescribing, T
             false,
             callOriginalConstructor: false,
             callOriginalClone: false,
-            cloneArguments: false,
-            allowMockingUnknownTypes: false,
         );
 
         Event\Facade::emitter()->testCreatedStub($originalClassName);
