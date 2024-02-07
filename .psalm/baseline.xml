@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.20.0@3f284e96c9d9be6fe6b15c79416e1d1903dcfef4">
+<files psalm-version="5.21.0@04ba9358e3f7d14a9dc3edd4e814a9d51d8c637f">
   <file src="src/Event/Dispatcher/DirectDispatcher.php">
     <UndefinedInterfaceMethod>
       <code>notify</code>
@@ -209,20 +209,7 @@
     <ArgumentTypeCoercion>
       <code>$className</code>
       <code>$methods</code>
-      <code>$type</code>
     </ArgumentTypeCoercion>
-    <DeprecatedClass>
-      <code><![CDATA[new MockTrait(
-                $classTemplate->render(),
-                $className['className'],
-            )]]></code>
-      <code><![CDATA[new MockTrait($classTemplate->render(), $className['className'])]]></code>
-      <code>new UnknownTraitException($traitName)</code>
-      <code>new UnknownTraitException($traitName)</code>
-    </DeprecatedClass>
-    <DeprecatedMethod>
-      <code>mockObjectForAbstractClass</code>
-    </DeprecatedMethod>
     <MissingThrowsDocblock>
       <code>getMethod</code>
       <code>testDouble</code>
@@ -232,15 +219,7 @@
       <code>testDouble</code>
       <code>testDouble</code>
       <code>testDouble</code>
-      <code>testDouble</code>
     </MissingThrowsDocblock>
-    <PossiblyNullArgument>
-      <code><![CDATA[$client->__getFunctions()]]></code>
-    </PossiblyNullArgument>
-    <RiskyTruthyFalsyComparison>
-      <code>!$parameterStart</code>
-      <code>empty($methods)</code>
-    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Framework/MockObject/Generator/MockClass.php">
     <LessSpecificReturnStatement>
@@ -262,7 +241,6 @@
                 'method_name'        => $this->methodName,
                 'modifier'           => $this->modifier,
                 'reference'          => $this->reference,
-                'clone_arguments'    => $this->cloneArguments ? 'true' : 'false',
                 'deprecation'        => $deprecation,
                 'return_result'      => $returnResult,
             ]]]></code>
@@ -271,27 +249,11 @@
       <code><![CDATA[strpos($parameterAsString, '<optional> ')]]></code>
     </PossiblyFalseOperand>
   </file>
-  <file src="src/Framework/MockObject/Generator/MockTrait.php">
-    <LessSpecificReturnStatement>
-      <code><![CDATA[$this->mockName]]></code>
-    </LessSpecificReturnStatement>
-    <MoreSpecificReturnType>
-      <code>class-string</code>
-    </MoreSpecificReturnType>
-  </file>
   <file src="src/Framework/MockObject/MockBuilder.php">
-    <DeprecatedMethod>
-      <code>mockObjectForAbstractClass</code>
-      <code>mockObjectForTrait</code>
-    </DeprecatedMethod>
     <InvalidReturnStatement>
-      <code>$object</code>
-      <code>$object</code>
       <code>$object</code>
     </InvalidReturnStatement>
     <InvalidReturnType>
-      <code><![CDATA[MockObject&MockedType]]></code>
-      <code><![CDATA[MockObject&MockedType]]></code>
       <code><![CDATA[MockObject&MockedType]]></code>
     </InvalidReturnType>
   </file>
@@ -328,19 +290,8 @@
   <file src="src/Framework/TestCase.php">
     <ArgumentTypeCoercion>
       <code><![CDATA[$e->getMessage()]]></code>
-      <code>$mockClassName</code>
-      <code>$originalClassName</code>
       <code><![CDATA[$this->expectedException]]></code>
     </ArgumentTypeCoercion>
-    <DeprecatedMethod>
-      <code>disableArgumentCloning</code>
-      <code>disallowMockingUnknownTypes</code>
-      <code>enableProxyingToOriginalMethods</code>
-      <code>generateClassFromWsdl</code>
-      <code>mockObjectForAbstractClass</code>
-      <code>mockObjectForTrait</code>
-      <code>objectForTrait</code>
-    </DeprecatedMethod>
     <MissingThrowsDocblock>
       <code>getMethod</code>
     </MissingThrowsDocblock>
