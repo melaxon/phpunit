@@ -214,6 +214,7 @@
       <code>testDouble</code>
       <code>testDouble</code>
       <code>testDouble</code>
+      <code>testDouble</code>
     </MissingThrowsDocblock>
   </file>
   <file src="src/Framework/MockObject/Generator/MockClass.php">
