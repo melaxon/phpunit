@@ -9,10 +9,6 @@
  */
 namespace PHPUnit\Framework\MockObject;
 
-use function assert;
-use PHPUnit\Event\Code\NoTestCaseObjectOnCallStackException;
-use PHPUnit\Event\Code\TestMethodBuilder;
-use PHPUnit\Event\Facade as EventFacade;
 use PHPUnit\Framework\MockObject\Builder\InvocationMocker as InvocationMockerBuilder;
 use PHPUnit\Framework\MockObject\Rule\InvocationOrder;
 
@@ -45,27 +41,6 @@ trait MockObjectApi
 
     public function expects(InvocationOrder $matcher): InvocationMockerBuilder
     {
-        assert($this instanceof StubInternal);
-
-        if (!$this->__phpunit_wasGeneratedAsMockObject()) {
-            $message = 'Configuring expectations on test doubles that were created as test stubs is deprecated. Support for this will be removed in PHPUnit 12.';
-
-            try {
-                $test = TestMethodBuilder::fromCallStack();
-
-                if (!isset(self::$__phpunit_deprecation_emitted_for_test[$test->id()])) {
-                    EventFacade::emitter()->testTriggeredPhpunitDeprecation(
-                        $test,
-                        $message,
-                    );
-
-                    self::$__phpunit_deprecation_emitted_for_test[$test->id()] = true;
-                }
-            } catch (NoTestCaseObjectOnCallStackException) {
-                EventFacade::emitter()->testRunnerTriggeredDeprecation($message);
-            }
-        }
-
         return $this->__phpunit_getInvocationHandler()->expects($matcher);
     }
 }
